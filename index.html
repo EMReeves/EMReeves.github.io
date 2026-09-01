@@ -4,10 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Evan M. Reeves — Quantum Computing Researcher</title>
-<meta name="description" content="Evan M. Reeves, PE, PMP — quantum computing researcher at the University of Illinois Chicago building low-cost quantum instruments for education and workforce development.">
+<meta name="description" content="Evan M. Reeves is an experimental quantum researcher building accessible quantum hardware and benchmarking what real quantum processors can do.">
+<meta name="theme-color" content="#182635">
+<link rel="canonical" href="https://emreeves.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Evan M. Reeves — Quantum Computing Researcher">
+<meta property="og:description" content="Accessible quantum hardware, real-hardware benchmarking, and qubit control.">
+<meta property="og:url" content="https://emreeves.github.io/">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Evan M. Reeves",
+  "url": "https://emreeves.github.io/",
+  "jobTitle": "Quantum Computing Researcher",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Illinois Chicago"
+  },
+  "sameAs": [
+    "https://scholar.google.com/citations?user=VOep5IMAAAAJ&hl=en",
+    "https://orcid.org/0000-0002-7548-616X",
+    "https://www.linkedin.com/in/evanmreeves/",
+    "https://www.spinquorum.org/"
+  ]
+}
+</script>
 <style>
 :root{
   --paper:#F4F6F7;
@@ -36,6 +62,8 @@ body{
 a{color:var(--copper-deep);text-decoration:none;border-bottom:1px solid rgba(181,96,43,.35);transition:border-color .15s, color .15s}
 a:hover{color:var(--copper);border-bottom-color:var(--copper)}
 a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--copper);outline-offset:3px;border-radius:2px}
+.skip-link{position:absolute;left:16px;top:-80px;z-index:100;background:var(--ink);color:#fff;padding:10px 14px;border-radius:3px}
+.skip-link:focus{top:12px;color:#fff}
 
 /* ---------- nav ---------- */
 .nav{
@@ -83,12 +111,17 @@ h1{
   line-height:1.06;letter-spacing:-.01em;margin-bottom:20px;
 }
 h1 .cred{font-size:.42em;font-weight:400;font-family:var(--mono);letter-spacing:.08em;color:var(--muted);white-space:nowrap}
+.hero-role{
+  font-family:var(--mono);font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--copper-deep);margin:-8px 0 20px;
+}
 .hero-thesis{
   font-family:var(--display);font-style:italic;font-weight:400;
-  font-size:1.28rem;line-height:1.5;color:var(--ink);max-width:34ch;margin-bottom:22px;
+  font-size:1.42rem;line-height:1.42;color:var(--ink);max-width:32ch;margin-bottom:18px;
 }
 .hero-thesis em{font-style:italic;color:var(--copper-deep)}
 .hero-meta{color:var(--muted);font-size:.95rem;max-width:52ch;margin-bottom:26px}
+.hero-status{font-family:var(--mono);font-size:.74rem;line-height:1.7;color:var(--muted);margin:-10px 0 24px}
 .hero-links{display:flex;gap:10px;flex-wrap:wrap}
 .chip{
   font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;
@@ -150,7 +183,7 @@ h1 .cred{font-size:.42em;font-weight:400;font-family:var(--mono);letter-spacing:
 .factbox li span:last-child{font-family:var(--mono);font-size:.74rem;color:var(--muted);white-space:nowrap;padding-top:2px}
 
 /* ---------- research cards ---------- */
-.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{
   background:var(--panel);border:1px solid var(--hairline);border-radius:4px;
   padding:24px 26px;position:relative;overflow:hidden;
@@ -159,6 +192,26 @@ h1 .cred{font-size:.42em;font-weight:400;font-family:var(--mono);letter-spacing:
 .card:hover::before{background:var(--copper)}
 .card .tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--copper-deep);display:block;margin-bottom:10px}
 .card p{font-size:.93rem;color:var(--muted)}
+.mission{
+  margin-top:18px;padding:22px 26px;background:var(--ink);color:var(--paper);
+  border-radius:4px;display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:start;
+}
+.mission strong{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:#E4A077}
+.mission p{color:#D4DCE2;font-size:.94rem;max-width:72ch}
+
+/* ---------- featured work ---------- */
+.section-intro{max-width:64ch;color:var(--muted);margin:-12px 0 28px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature{
+  background:var(--panel);border:1px solid var(--hairline);border-radius:4px;
+  padding:26px;display:flex;flex-direction:column;min-height:280px;
+}
+.feature-num{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;color:var(--copper-deep);margin-bottom:34px}
+.feature h3{font-size:1.2rem;margin-bottom:10px}
+.feature p{font-size:.92rem;color:var(--muted);margin-bottom:18px}
+.feature .evidence{margin-top:auto;padding-top:16px;border-top:1px solid var(--field);font-family:var(--mono);font-size:.69rem;line-height:1.55;color:var(--ink)}
+.feature-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.feature-links a,.pub-links a{font-family:var(--mono);font-size:.7rem;letter-spacing:.05em}
 
 /* ---------- publications ---------- */
 .pub{padding:20px 0;border-top:1px solid var(--hairline)}
@@ -166,6 +219,10 @@ h1 .cred{font-size:.42em;font-weight:400;font-family:var(--mono);letter-spacing:
 .pub-venue{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--copper-deep);margin-bottom:4px}
 .pub h3{margin-bottom:4px}
 .pub .authors{font-size:.88rem;color:var(--muted)}
+.pub-summary{font-size:.92rem;color:var(--muted);max-width:76ch;margin-top:12px}
+.pub-role{font-size:.84rem;color:var(--ink);margin-top:8px}
+.pub-role b{color:var(--copper-deep)}
+.pub-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px}
 .pub .authors b{color:var(--ink);font-weight:600}
 .pubs-note{margin-top:20px;font-size:.9rem;color:var(--muted)}
 
@@ -194,6 +251,7 @@ details h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-tr
 .xp .role{font-weight:600}
 .xp .org{color:var(--copper-deep);font-size:.92rem;margin-bottom:5px}
 .xp p{font-size:.92rem;color:var(--muted)}
+.xp-intro{max-width:70ch;color:var(--muted);margin:-10px 0 12px}
 
 /* ---------- teaching / lists ---------- */
 .twocol{display:grid;grid-template-columns:1fr 1fr;gap:48px}
@@ -226,7 +284,8 @@ details h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-tr
   .hero-grid{grid-template-columns:1fr;gap:36px}
   .portrait{justify-self:start;width:210px}
   .about-grid,.twocol{grid-template-columns:1fr;gap:36px}
-  .cards{grid-template-columns:1fr}
+  .cards,.features{grid-template-columns:1fr}
+  .mission{grid-template-columns:1fr;gap:8px}
   section{padding:56px 0 8px}
 }
 @media (max-width:520px){
@@ -237,6 +296,7 @@ details h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-tr
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <nav class="nav" aria-label="Main">
   <div class="nav-inner">
@@ -244,8 +304,8 @@ details h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-tr
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#research">Research</a>
+      <a href="#featured">Featured work</a>
       <a href="#publications">Publications</a>
-      <a href="#talks">Talks</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </div>
@@ -255,16 +315,18 @@ details h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-tr
 <header class="hero wrap" id="top">
   <div class="hero-grid">
     <div>
-      <p class="hero-kicker">Quantum Computing · <b>University of Illinois Chicago</b></p>
-      <h1>Evan M. Reeves <span class="cred">PE&nbsp;·&nbsp;PMP</span></h1>
-      <p class="hero-thesis">Building <em>quantum computers you can build at home</em> — and the benchmarks that tell us what quantum hardware can really do.</p>
-      <p class="hero-meta">Ph.D. candidate in Electrical Engineering advised by Dr. Thomas A. Searles. Co-founder &amp; CFO of SpinQuorum, developing affordable quantum devices for education and workforce development. Licensed Professional Engineer with the Illinois Department of Transportation.</p>
+      <p class="hero-kicker">Experimental quantum research · <b>University of Illinois Chicago</b></p>
+      <h1>Evan M. Reeves</h1>
+      <p class="hero-role">Quantum computing researcher</p>
+      <p class="hero-thesis">Making quantum hardware <em>buildable, measurable, and accessible.</em></p>
+      <p class="hero-meta">I build low-cost quantum instruments that fit on a classroom bench—and hardware-aware benchmarks that show what today's quantum processors can actually do.</p>
+      <p class="hero-status">Ph.D. Candidate, UIC · Professional Engineer · Co-Founder, SpinQuorum</p>
       <div class="hero-links">
-        <a class="chip primary" href="mailto:Evan.M.Reeves@gmail.com">Email</a>
+        <a class="chip primary" href="cv.pdf">Download CV</a>
+        <a class="chip" href="mailto:Evan.M.Reeves@gmail.com">Contact</a>
         <a class="chip" href="https://scholar.google.com/citations?user=VOep5IMAAAAJ&amp;hl=en">Google Scholar</a>
         <a class="chip" href="https://orcid.org/0000-0002-7548-616X">ORCID</a>
         <a class="chip" href="https://www.linkedin.com/in/evanmreeves/">LinkedIn</a>
-        <a class="chip" href="https://www.spinquorum.org/">SpinQuorum</a>
       </div>
     </div>
     <div class="portrait">
@@ -283,28 +345,24 @@ details h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-tr
   </div>
 </div>
 
-<main>
+<main id="main">
 <section class="wrap" id="about">
   <p class="eyebrow">About</p>
   <div class="about-grid">
     <div>
-      <h2>Making quantum hardware something you can hold.</h2>
-      <p>I'm a quantum computing researcher in the SAMPL at the University of Illinois Chicago. My work centers on a conviction: the fastest way to grow the quantum workforce is to put real quantum hardware in students' hands. To that end, I design and build low-cost nuclear magnetic resonance quantum devices — complete single-qubit systems with custom control electronics, inexpensive enough for an undergraduate teaching lab. In 2025 I co-founded SpinQuorum to bring affordable quantum devices from the lab bench to classrooms.</p>
-      <p>On the other side of the bench, I study what today's noisy quantum processors can actually deliver. With collaborators across the country, I develop hardware-aware benchmarking workflows built on the Quantum Permutation Algorithm, run across multiple quantum architectures including IBM superconducting hardware. I also work on superconducting qubit simulation in Ansys HFSS and qubit control with the QICK platform, in collaboration with Fermilab SQMS-related research. I also assist several collaborators with research on applied quantum computation in chemistry and finance.</p>
-      <p>Before and alongside the Ph.D., I've spent a decade as an engineer at the Illinois Department of Transportation —  first performing then supervising QA testing for $400M+ in infrastructure contracts, and applying machine learning to engineering problems. I hold licenses as a Professional Engineer in Illinois and Wyoming, plus PMP and CMP certifications.</p>
+      <h2>Experimental hardware, honest benchmarks.</h2>
+      <p>I'm a quantum computing researcher in the SAMPL group at the University of Illinois Chicago. I design low-cost nuclear magnetic resonance systems with custom control electronics—complete single-qubit devices intended to make quantum hardware tangible in undergraduate laboratories.</p>
+      <p>I also study what today's noisy processors can actually deliver. My work includes multi-architecture benchmarking with the Quantum Permutation Algorithm, superconducting-qubit simulation in Ansys HFSS, and qubit-control development with the QICK platform.</p>
+      <p>My approach is informed by a decade of professional engineering work in instrumentation, testing, quality assurance, technical supervision, and large-scale project delivery. I treat experimental quantum systems as machines that must be built, measured, documented, and trusted.</p>
     </div>
     <aside class="factbox" aria-label="At a glance">
       <h3>At a glance</h3>
       <ul>
         <li><span>Ph.D. Electrical Engineering, UIC</span><span>exp. 2027</span></li>
-        <li><span>Master of Profesional Studies, Purdue Global</span><span>2025</span></li>
-        <li><span>Master of Big Data and Business Intelligence, ENEB Barcelona</span><span>2024</span></li>
-        <li><span>Executive M.B.A., Quantic</span><span>2023</span></li>
         <li><span>M.S. Physics, Northern Illinois</span><span>2015</span></li>
         <li><span>B.S. Applied Physics, Northern Illinois</span><span>2011</span></li>
-        <li><span>Assocates of Engineering Science, William Rainey Harper College</span><span>2012</span></li>
-        <li><span>Professional Engineer, IL &amp; WY</span><span>lic.</span></li>
-        <li><span>PMP · CMP</span><span>cert.</span></li>
+        <li><span>Professional Engineer, IL &amp; WY</span><span>licensed</span></li>
+        <li><span>Project Management Professional</span><span>PMP</span></li>
       </ul>
     </aside>
   </div>
@@ -312,53 +370,86 @@ details h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-tr
 
 <section class="wrap" id="research">
   <p class="eyebrow">Research</p>
-  <h2>Four threads, one instrument panel.</h2>
+  <h2>Three technical pillars.</h2>
   <div class="cards">
     <div class="card">
-      <span class="tag">Low-cost quantum devices</span>
-      <h3>NMR quantum computing for the classroom</h3>
-      <p>Design and development of control electronics for a low-cost single-qubit NMR quantum computer, plus compact portable spectrometers and optically detectable magnetic resonance devices for undergraduate education labs.</p>
+      <span class="tag">Accessible quantum hardware</span>
+      <h3>Quantum systems for the classroom bench</h3>
+      <p>Low-cost single-qubit NMR computers, compact spectrometers, ODMR devices, and the custom control electronics that make them usable in undergraduate laboratories.</p>
     </div>
     <div class="card">
-      <span class="tag">Benchmarking &amp; characterization</span>
-      <h3>What can NISQ hardware really do?</h3>
-      <p>Hardware-aware performance evaluation of the Quantum Permutation Algorithm across quantum architectures, including case studies on IBM Sherbrooke — turning algorithm runs into honest measurements of near-term machines.</p>
+      <span class="tag">Quantum hardware benchmarking</span>
+      <h3>Evidence from real processors</h3>
+      <p>Hardware-aware performance evaluation across quantum architectures, using algorithm execution to expose the effects of circuit depth, native gates, compilation, and device noise.</p>
     </div>
     <div class="card">
-      <span class="tag">Superconducting qubits</span>
-      <h3>Simulation and control</h3>
-      <p>Electromagnetic simulation of superconducting qubits in Ansys HFSS, qubit control software development connected to Fermilab SQMS research, variable pulse timing and qubit cloaking on QICK control hardware.</p>
+      <span class="tag">Qubit simulation &amp; control</span>
+      <h3>From electromagnetic model to pulse</h3>
+      <p>Superconducting-qubit simulation in Ansys HFSS and control development with QICK, including variable pulse timing and qubit-cloaking experiments.</p>
     </div>
-    <div class="card">
-      <span class="tag">Workforce development</span>
-      <h3>Growing who gets to do quantum</h3>
-      <p>Closing the quantum workforce gap through accessible instrumentation, mentorship of undergraduate researchers, and SpinQuorum — a startup building a desktop NMR quantum computing platform for education.</p>
-    </div>
+  </div>
+  <div class="mission">
+    <strong>Why I do it</strong>
+    <p>Quantum education should include contact with real hardware. Through laboratory research, undergraduate mentorship, and SpinQuorum, I work to make quantum instrumentation available to more students and institutions.</p>
+  </div>
+</section>
+
+<section class="wrap" id="featured">
+  <p class="eyebrow">Featured work</p>
+  <h2>Build it. Run it. Measure it.</h2>
+  <p class="section-intro">Three projects show the range of my work—from physical instruments students can operate to experiments that test the limits of current quantum processors.</p>
+  <div class="features">
+    <article class="feature">
+      <span class="feature-num">01 · INSTRUMENT</span>
+      <h3>Desktop NMR quantum computer</h3>
+      <p>A low-cost single-qubit platform with custom control electronics, designed to bring complete quantum experiments onto an undergraduate laboratory bench.</p>
+      <p class="evidence">Hardware design · control electronics · experimental integration</p>
+      <div class="feature-links"><a href="https://www.spinquorum.org/">SpinQuorum →</a></div>
+    </article>
+    <article class="feature">
+      <span class="feature-num">02 · BENCHMARK</span>
+      <h3>Quantum Permutation Algorithm</h3>
+      <p>A multi-architecture workflow that uses real algorithm performance—not only abstract device metrics—to characterize noisy quantum hardware.</p>
+      <p class="evidence">Hardware workflows · circuit execution · performance analysis</p>
+      <div class="feature-links"><a href="https://opg.optica.org/jlt/abstract.cfm?uri=quantum-2026-QTu3A.18">Proceedings record →</a></div>
+    </article>
+    <article class="feature">
+      <span class="feature-num">03 · CONTROL</span>
+      <h3>Superconducting qubit simulation &amp; control</h3>
+      <p>Electromagnetic models and pulse-control experiments that connect device geometry, control hardware, and observed qubit behavior.</p>
+      <p class="evidence">Ansys HFSS · QICK · pulse timing · qubit cloaking</p>
+    </article>
   </div>
 </section>
 
 <section class="wrap" id="publications">
   <p class="eyebrow">Publications</p>
-  <h2>Published manuscripts</h2>
-  
-    <article class="pub">
+  <h2>Selected publications &amp; proceedings</h2>
+
+  <article class="pub">
     <p class="pub-venue">Optica Quantum 2.0 2026 · Glasgow, United Kingdom</p>
     <h3>Benchmarking Noisy-Intermediate Scale Hardware with the Quantum Permutation Algorithm: A Case Study on IBM Sherbrooke</h3>
     <p class="authors">Blackwell, A., <b>Reeves, E.</b>, Strickland, E., Metwalli, S., Khannejad, A., Gomez, E., Salonis, C., Chase, Z., Glasser, R., Kirby, B., Lohani, S., &amp; Searles, T. (2026)</p>
+    <p class="pub-summary">A two- and three-qubit case study comparing simulator and device outputs to show how performance degrades as circuits become deeper and more hardware-intensive.</p>
+    <p class="pub-role"><b>My contribution:</b> hardware workflow development, circuit execution, performance analysis, and manuscript development.</p>
+    <div class="pub-links">
+      <a href="https://opg.optica.org/jlt/abstract.cfm?uri=quantum-2026-QTu3A.18">Proceedings record →</a>
+      <a href="https://opg.optica.org/viewmedia.cfm?seq=0&amp;uri=QUANTUM-2026-QTu3A.18">PDF →</a>
+    </div>
   </article>
-  
-  <h2>Accepted manuscripts</h2>
 
   <article class="pub">
-    <p class="pub-venue">IEEE Quantum Week 2026 · Toronto, Canada</p>
+    <p class="pub-venue">Accepted · IEEE Quantum Week 2026 · Toronto, Canada</p>
     <h3>A Compact, Portable Spectrometer for NMR Measurements in Undergraduate Education Labs</h3>
     <p class="authors">Viti, I., <b>Reeves, E.</b>, Elisma, D., Chandler, J., &amp; Searles, T. A. (2026)</p>
+    <p class="pub-summary">A portable NMR measurement platform intended to lower the cost and infrastructure barriers to hands-on magnetic-resonance education.</p>
   </article>
 
   <article class="pub">
-    <p class="pub-venue">IEEE Quantum Week 2026 · Toronto, Canada</p>
+    <p class="pub-venue">Accepted · IEEE Quantum Week 2026 · Toronto, Canada</p>
     <h3>A Low-Cost Optically Detectable Magnetic Resonance Device</h3>
     <p class="authors">Viti, I., <b>Reeves, E.</b>, Elisma, D., Chandler, J., &amp; Searles, T. A. (2026)</p>
+    <p class="pub-summary">An accessible ODMR system developed for instructional laboratories and practical exposure to quantum sensing hardware.</p>
   </article>
 
   <p class="pubs-note">A complete and current record is maintained on <a href="https://scholar.google.com/citations?user=VOep5IMAAAAJ&amp;hl=en">Google Scholar</a> and <a href="https://orcid.org/0000-0002-7548-616X">ORCID</a>.</p>
@@ -366,57 +457,35 @@ details h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-tr
 
 <section class="wrap" id="talks">
   <p class="eyebrow">Presentations</p>
-  <h2>Selected talks</h2>
+  <h2>Selected presentations</h2>
 
   <div class="talk"><span class="yr">2026</span><div><p class="t">Low-cost quantum information science laboratory devices</p><p class="v">AAPT Summer Meeting · Pasadena, CA</p></div></div>
   <div class="talk"><span class="yr">2026</span><div><p class="t">A low-cost nuclear magnetic resonance quantum computer</p><p class="v">APS Global Summit · Denver, CO</p></div></div>
   <div class="talk"><span class="yr">2026</span><div><p class="t">A quantum computer you can build at home</p><p class="v">Olive-Harvey Quantum Symposium · Chicago, IL</p></div></div>
   <div class="talk"><span class="yr">2025</span><div><p class="t">Hardware aware performance evaluation of the quantum permutation algorithm</p><p class="v">18th U.S. National Congress on Computational Mechanics · Chicago, IL</p></div></div>
-  <div class="talk"><span class="yr">2025</span><div><p class="t">A low-cost nuclear magnetic resonance quantum computer</p><p class="v">NSBP–NSHP Joint Conference · San Jose, CA</p></div></div>
-  <div class="talk"><span class="yr">2024</span><div><p class="t">Qubit cloaking on superconducting qubits using Qiskit Pulse and Superstaq</p><p class="v">NSBP–NSHP Joint Conference · Houston, TX</p></div></div>
-
-  <details>
-    <summary>Full presentation record</summary>
-    <div class="inner">
-      <h4>Oral presentations</h4>
-      <div class="talk"><span class="yr">2026</span><div><p class="t">A low-cost nuclear magnetic resonance quantum computer</p><p class="v">Spring Meeting, Chicago &amp; Illinois Sections of AAPT · Palatine, IL</p></div></div>
-      <div class="talk"><span class="yr">2025</span><div><p class="t">A low-cost nuclear magnetic resonance quantum computer</p><p class="v">Northrop Grumman–UIC Quantum Technology Meeting · Chicago, IL</p></div></div>
-      <div class="talk"><span class="yr">2025</span><div><p class="t">A low-cost nuclear magnetic resonance quantum computer</p><p class="v">IBM HBCU Quantum Center QuERC Annual Conference · Chicago, IL</p></div></div>
-      <h4>Poster presentations</h4>
-      <div class="talk"><span class="yr">2026</span><div><p class="t">AI-assisted scalable quantum state reconstruction at the edge-devices</p><p class="v">University of Illinois Superconducting Circuits Conference · Urbana, IL</p></div></div>
-      <div class="talk"><span class="yr">2025</span><div><p class="t">A quantum computer you can build at home</p><p class="v">Fermilab SQMS Center Annual Meeting · Batavia, IL</p></div></div>
-      <div class="talk"><span class="yr">2025</span><div><p class="t">Hardware aware performance evaluation of the quantum permutation algorithm</p><p class="v">Chicago Quantum Symposium · Chicago, IL</p></div></div>
-      <div class="talk"><span class="yr">2025</span><div><p class="t">Hardware aware performance evaluation of the quantum permutation algorithm</p><p class="v">UIC Computational Research Symposium · Chicago, IL</p></div></div>
-      <div class="talk"><span class="yr">2025</span><div><p class="t">Qiskit Ansys HFSS finite element simulation of superconducting qubits</p><p class="v">IBM HBCU Quantum Center QuERC Annual Conference · Chicago, IL</p></div></div>
-      <div class="talk"><span class="yr">2023</span><div><p class="t">Quantum computing for traffic signal optimization</p><p class="v">U.S. Quantum Information Science Summer School · Batavia, IL</p></div></div>
-      <div class="talk"><span class="yr">2011</span><div><p class="t">Quantitative 3D analysis of nanostructures by TEM anaglyph imaging electron microscopy</p><p class="v">NIU Undergraduate Research and Artistry Day · DeKalb, IL</p></div></div>
-      <h4>Contributed / co-authored</h4>
-      <div class="talk"><span class="yr">2026</span><div><p class="t">Quantum diagonalization–aided design and validation of catalytic pathways for multi-carbon products in CO₂ electroreduction</p><p class="v">APS Global Summit · Denver, CO</p></div></div>
-      <div class="talk"><span class="yr">2025</span><div><p class="t">Translating 2-qubit and 3-qubit circuits from Qiskit to Cirq</p><p class="v">IBM HBCU Quantum Center QuERC Annual Conference · Chicago, IL</p></div></div>
-      <div class="talk"><span class="yr">2025</span><div><p class="t">Development of a low-cost NMR quantum computer</p><p class="v">IBM HBCU Quantum Center QuERC Annual Conference · Chicago, IL</p></div></div>
-      <div class="talk"><span class="yr">2024</span><div><p class="t">Mitigating multidimensionality challenges of quantum state reconstruction at the edge devices</p><p class="v">NSBP Annual Conference · Houston, TX</p></div></div>
-    </div>
-  </details>
+  <div class="talk"><span class="yr">2025</span><div><p class="t">A quantum computer you can build at home</p><p class="v">Fermilab SQMS Center Annual Meeting · Batavia, IL</p></div></div>
+  <p class="pubs-note">The complete presentation record is available in my <a href="cv.pdf">CV</a>.</p>
 </section>
 
 <section class="wrap" id="experience">
   <p class="eyebrow">Experience</p>
-  <h2>Current appointments</h2>
+  <h2>Research grounded in engineering practice.</h2>
+  <p class="xp-intro">My research career is built on a decade of professional work where measurements, documentation, standards, budgets, and hardware all have real consequences.</p>
 
-  <div class="xp">
-    <span class="when">2025 — present</span>
-    <div>
-      <p class="role">Co-Founder &amp; Chief Financial Officer</p>
-      <p class="org">SpinQuorum</p>
-      <p>Affordable quantum computing devices for education and workforce development. Technical scope, development priorities, budgeting, and organizational strategy for a desktop NMR quantum computing platform.</p>
-    </div>
-  </div>
   <div class="xp">
     <span class="when">2024 — present</span>
     <div>
       <p class="role">Research Assistant</p>
       <p class="org">University of Illinois Chicago</p>
-      <p>Qubit control software design, multi-qubit benchmarking workflows, hardware-aware performance analysis, and superconducting qubit simulation across experimental and computational quantum projects.</p>
+      <p>Qubit-control software, multi-qubit benchmarking workflows, hardware-aware performance analysis, and superconducting-qubit simulation across experimental and computational research projects.</p>
+    </div>
+  </div>
+  <div class="xp">
+    <span class="when">2025 — present</span>
+    <div>
+      <p class="role">Co-Founder</p>
+      <p class="org">SpinQuorum · Chief Financial Officer</p>
+      <p>Translating low-cost quantum-instrumentation research into deployable educational hardware through technical planning, development strategy, budgeting, and organizational leadership.</p>
     </div>
   </div>
   <div class="xp">
@@ -424,15 +493,7 @@ details h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-tr
     <div>
       <p class="role">Civil Engineer</p>
       <p class="org">Illinois Department of Transportation</p>
-      <p>Supervising night-shift laboratory operations for physical and chemical QA testing supporting roadway materials and infrastructure contracts valued at more than $400 million.</p>
-    </div>
-  </div>
-  <div class="xp">
-    <span class="when">2015 — 2025</span>
-    <div>
-      <p class="role">Earlier roles</p>
-      <p class="org">IDOT · Attic Entertainment · Northern Illinois University</p>
-      <p>Electrical engineer and senior engineering technician at IDOT (blockchain inventory systems, ML-based aggregate detection, lab modernization); CEO of Attic Entertainment, producing a 1,000+ attendee gaming convention with a staff of 100+; graduate research in perovskite characterization and muon detection at NIU.</p>
+      <p>Engineering, laboratory operations, and quality-assurance testing supporting roadway materials and infrastructure contracts valued at more than $400 million.</p>
     </div>
   </div>
 </section>
@@ -445,7 +506,6 @@ details h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-tr
       <ul class="plain">
         <li>Mentor to undergraduate researchers in CS, ECE, and engineering physics across multiple institutions<span class="sub">incl. a 2025 UIC Electrical Engineering capstone group</span></li>
         <li>Laboratory Trainer, Illinois Department of Transportation<span class="sub">2018–2021, 2024–present · AASHTO accreditation training</span></li>
-        <li>Academic tutor — calculus, physics, engineering, statistics<span class="sub">2012–2021 · elementary through graduate level</span></li>
         <li>Graduate Teaching Assistant, Northern Illinois University<span class="sub">2012 · E&amp;M laboratory sections</span></li>
       </ul>
     </div>
@@ -454,7 +514,6 @@ details h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-tr
         <li>Union Steward &amp; Bargaining Committee Member, UIC Graduate Employee Organization<span class="sub">2025–2026</span></li>
         <li>Founder &amp; Program Director, The GG Initiative<span class="sub">2020</span></li>
         <li>Disaster Action Team Captain, American Red Cross<span class="sub">2015</span></li>
-        <li>Member — IEEE · APS · ACM · NSBP · NSBE · AAPT · ASEE · NSPE · PMI<span class="sub">professional societies</span></li>
       </ul>
     </div>
   </div>
